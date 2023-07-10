@@ -5,7 +5,7 @@ import (
 	"crypto/sha256"
 )
 
-//go:generate mockgen -source=$GOFILE -destination=./hmacmock/mock_$GOFILE -package=hmacmock
+//go:generate go run go.uber.org/mock/mockgen@latest -source=$GOFILE -destination=./hmacmock/mock_$GOFILE -package=hmacmock
 
 // Verifier - verifier
 type Verifier interface {
